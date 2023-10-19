@@ -9,6 +9,7 @@
     - trigger_condition: "ON_CHANGE_AT_PATH"
       trigger_condition_paths:
         - "/folder1/"
+  change_set_base: "PULL_REQUEST"
   actions:
     - action: "test action"
       type: "NATIVE_BUILD_MAC"
