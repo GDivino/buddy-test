@@ -5,6 +5,8 @@
       refs:
         - "main"
   priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  auto_clear_cache: true
   trigger_conditions:
     - trigger_condition: "ON_CHANGE_AT_PATH"
       trigger_condition_paths:
