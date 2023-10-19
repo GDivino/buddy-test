@@ -1,0 +1,18 @@
+- pipeline: "stg-pipeline"
+  on: EVENT
+  events:
+    - type: PUSH
+      refs:
+        - "main"
+  priority: "NORMAL"
+  trigger_conditions:
+    - trigger_condition: ON_CHANGE_AT_PATH
+      trigger_condition_paths:
+        - folder2
+  actions:
+    - action: "test action"
+      type: "NATIVE_BUILD_MAC"
+      working_directory: "/Users/buddy/build"
+      commands:
+        - "ls"
+
