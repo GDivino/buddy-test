@@ -11,7 +11,10 @@
         - folder1
   actions:
     - action: "test action"
-      type: "BUILD"
+      type: "NATIVE_BUILD_MAC"
+      working_directory: "/Users/buddy/build"
+      commands:
+        - "ls"
 
 - pipeline: "stg-pipeline"
   on: EVENT
@@ -26,4 +29,7 @@
         - folder2
   actions:
     - action: "test action"
-      type: "BUILD"
+      type: "NATIVE_BUILD_MAC"
+      working_directory: "/Users/buddy/build"
+      commands:
+        - "ls"
