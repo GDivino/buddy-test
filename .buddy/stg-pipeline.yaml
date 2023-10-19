@@ -5,7 +5,10 @@
       refs:
         - "main"
   priority: "NORMAL"
-  trigger_condition: "ALWAYS"
+  trigger_conditions:
+    - trigger_condition: ON_CHANGE_AT_PATH
+      trigger_condition_paths:
+        - "folder2/dir2/"
   actions:
     - action: "test action"
       type: "NATIVE_BUILD_MAC"
