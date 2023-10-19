@@ -8,7 +8,7 @@
   trigger_conditions:
     - trigger_condition: ON_CHANGE_AT_PATH
       trigger_condition_paths:
-        - folder1
+        - "folder1/"
   actions:
     - action: "test action"
       type: "NATIVE_BUILD_MAC"
