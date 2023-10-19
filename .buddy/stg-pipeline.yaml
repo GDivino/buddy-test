@@ -1,14 +1,14 @@
 - pipeline: "stg-pipeline"
   on: EVENT
   events:
-  - type: PUSH
-    refs:
-    - "main"
+    - type: PUSH
+      refs:
+        - "main"
   priority: "NORMAL"
   trigger_conditions:
-  - trigger_condition: ON_CHANGE_AT_PATH
-    trigger_condition_paths:
-    - "folder2/dir2/"
+    - trigger_condition: "ON_CHANGE_AT_PATH"
+      trigger_condition_paths:
+        - "folder2/dir2/"
   actions:
     - action: "test action"
       type: "NATIVE_BUILD_MAC"
